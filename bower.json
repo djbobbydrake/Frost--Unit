@@ -1,0 +1,23 @@
+{
+  "name": "Frost--Unit",
+  "version": "1.0.0",
+  "homepage": "https://github.com/Itrulia/Frost--Unit",
+  "authors": [
+    "Karl Merkli <info@karl-merkli.ch>"
+  ],
+  "description": "Unit library written in sass",
+  "keywords": [
+    "units",
+    "itrulia",
+    "sass",
+    "frost"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

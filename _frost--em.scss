@@ -1,0 +1,19 @@
+// Converts value from any unit to em
+
+@function em($value){
+	@if unitless($value){
+		@return #{$value}em;
+	}
+	@else if unit($value) == rem{
+		@return #{strip-unit($value)}em;
+	}
+	@else if unit($value) == px{
+		@return #{strip-unit($value)/16}em;
+	}
+	@else if unit($value) == pt{
+		@return #{strip-unit(px($value))/16}em;
+	}
+	@else {
+		@return $value;
+	}
+}

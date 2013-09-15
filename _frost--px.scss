@@ -1,0 +1,16 @@
+// Converts value from any unit to px
+
+@function px($value){
+	@if unitless($value){
+		@return #{$value}px;
+	}
+	@else if (unit($value) == em) or (unit($value) == rem){
+		@return #{strip-unit($value)*16}px;
+	}
+	@else if unit($value) == pt{
+		@return #{strip-unit($value)/72*96}px;
+	}
+	@else {
+		@return $value;
+	}
+}
