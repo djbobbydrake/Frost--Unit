@@ -1,7 +1,10 @@
 // Converts value from any unit to pt
 
 @function pt($value){
-	@if unitless($value){
+	@if $value == 0{
+		@return 0;
+	}
+	@else if unitless($value){
 		@return #{$value}pt;
 	}
 	@else if (unit($value) == em) or (unit($value) == rem){

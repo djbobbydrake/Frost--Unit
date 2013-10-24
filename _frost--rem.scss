@@ -1,7 +1,10 @@
 // Converts value from any unit to rem
 
 @function rem($value){
-	@if unitless($value){
+	@if $value == 0{
+		@return 0;
+	}
+	@else if unitless($value){
 		@return #{$value}rem;
 	}
 	@else if unit($value) == em{
@@ -17,3 +20,4 @@
 		@return $value;
 	}
 }
+
